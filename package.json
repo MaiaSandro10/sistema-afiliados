@@ -1,11 +1,6 @@
 {
-  "name": "sistema-afiliados",
-  "version": "1.0.0",
-  "private": true,
-  "description": "Vitrine de ofertas afiliadas para múltiplas plataformas.",
-  "scripts": {
-    "test": "node --check app.js",
-    "build": "node -e \"const fs=require('fs'); for(const f of ['index.html','styles.css','app.js']) if(!fs.existsSync(f)) throw new Error('Arquivo ausente: '+f); console.log('Build estático OK')\"",
-    "lint": "node --check app.js"
-  }
+  "name":"sistema-afiliados",
+  "version":"1.1.0",
+  "private":true,
+  "scripts":{"start":"node api/server.js","test":"node --check app.js && node --check api/server.js","lint":"node --check app.js && node --check api/server.js","build":"node -e \"const fs=require('fs'); for(const f of ['index.html','styles.css','app.js','api/server.js','api/db.json','sitemap.xml']) if(!fs.existsSync(f)) throw Error('Arquivo ausente: '+f); console.log('Build OK')\""}
 }
